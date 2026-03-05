@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio Personal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ========== CURSOR PERSONALIZADO ========== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">Mi Mundo</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio" class="nav-link" data-section="inicio">Inicio</a></li>
+      <li><a href="#sobre-mi" class="nav-link" data-section="sobre-mi">Sobre mí</a></li>
+      <li><a href="#perfil-academico" class="nav-link" data-section="perfil-academico">Perfil</a></li>
+      <li><a href="#hobbies" class="nav-link" data-section="hobbies">Hobbies</a></li>
+      <li><a href="#actividades" class="nav-link" data-section="actividades">Actividades</a></li>
+      <li><a href="#metas" class="nav-link" data-section="metas">Metas</a></li>
+      <li><a href="#proyectos" class="nav-link" data-section="proyectos">Proyectos</a></li>
+      <li><a href="#galeria" class="nav-link" data-section="galeria">Galería</a></li>
+      <li><a href="#contactos" class="nav-link cta-nav" data-section="contactos">Contacto</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ========== INICIO / HERO ========== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <div class="hero-wave wave1"></div>
+      <div class="hero-wave wave2"></div>
+      <div class="hero-wave wave3"></div>
+      <div class="floating-shape s1"></div>
+      <div class="floating-shape s2"></div>
+      <div class="floating-shape s3"></div>
+      <div class="floating-shape s4"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-badge">✦ Bienvenido/a a mi espacio</div>
+        <h1 class="hero-title">
+          <span class="title-line">Hola, soy</span>
+          <span class="title-name">Cielo Sanchez</span>
+          <span class="title-role typing-text" id="typing-text"></span>
+        </h1>
+        <p class="hero-objective">
+Soy Cielo Sánchez, aunque también me dicen Sky . Estudio Ingeniería en Bases de Datos e Inteligencia de Negocios y me encanta descubrir cómo los datos pueden contar historias y resolver problemas.
+
+Me mueve la curiosidad, el aprendizaje constante y las ganas de crecer en el mundo tecnológico… siempre con buena energía y grandes metas.      </p>
+        <div class="hero-actions">
+          <a href="#proyectos" class="btn-primary">Ver mis proyectos <i class="fas fa-arrow-right"></i></a>
+          <a href="#contactos" class="btn-secondary">Contactarme</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Proyectos</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Habilidades</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Sueños</span></div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-photo-container">
+          <div class="photo-bg-ring ring1"></div>
+          <div class="photo-bg-ring ring2"></div>
+          <div class="photo-blob">
+            <img src="images/WhatsApp Image 2026-03-03 at 23.26.40.jpeg" alt="Foto de perfil" id="hero-img" />
+            <label class="upload-btn" onclick="triggerUpload('hero-img')" title="Cambiar foto">
+              <i class="fas fa-camera"></i>
+            </label>
+          </div>
+          <div class="floating-card card-1">
+            <i class="fas fa-star"></i> <span>Apasionado/a</span>
+          </div>
+          <div class="floating-card card-2">
+            <i class="fas fa-rocket"></i> <span>Creativo/a</span>
+          </div>
+          <div class="floating-card card-3">
+            <i class="fas fa-heart"></i> <span>Dedicado/a</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Desplazate</span>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE MÍ ========== -->
+  <section class="section" id="sobre-mi">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Sobre mí</h2>
+        <p class="section-sub">Conoceme un poco más</p>
+      </div>
+
+      <div class="sobre-grid">
+        <div class="sobre-photo" data-animate="left">
+          <div class="photo-frame">
+            <img src="images/WhatsApp Image 2026-03-04 at 19.20.12.jpeg" alt="Sobre mí" id="sobre-img" />
+            <label class="upload-btn" onclick="triggerUpload('sobre-img')"><i class="fas fa-camera"></i></label>
+          </div>
+          <div class="photo-decoration dec-1"></div>
+          <div class="photo-decoration dec-2"></div>
+          <div class="experience-badge">
+            <span class="exp-num">🌟</span>
+            <span class="exp-text">Mi historia</span>
+          </div>
+        </div>
+
+        <div class="sobre-content" data-animate="right">
+          <h3 class="sobre-name">¿Quién soy?</h3>
+          <p class="sobre-intro">
+            Soy Cielo Sánchez, aunque muchos también me llaman Sky. Actualmente estudio Ingeniería en Bases de Datos e Inteligencia de Negocios, una carrera enfocada en el análisis, gestión y uso estratégico de los datos.
+
+Me considero una persona curiosa, medio responsable ,  me encanta bailar , comer y apasionada por la tecnología  . Me interesa aprender constantemente sobre análisis de datos y sobre todo lo que pueda , programación y sistemas de información, con el objetivo de transformar los datos en conocimiento útil para la toma de decisiones.
+
+Mi meta es crecer profesionalmente en el área tecnológica para poder ganar dinero y poder inventir y ganar mas tambien me gusta participar en proyectos innovadores y desarrollar soluciones inteligentes que generen valor en las organizaciones y en la sociedad.
+          </p>
+          <p class="sobre-text">
+            Podés hablar de tu historia, tus valores, lo que te mueve cada día, tus experiencias más importantes y todo lo que quieras compartir sobre vos.
+          </p>
+
+          <div class="personal-info">
+            <div class="info-row"><i class="fas fa-map-marker-alt"></i><span><strong>Ciudad:</strong> Cochabamba</span></div>
+            <div class="info-row"><i class="fas fa-graduation-cap"></i><span><strong>Estudios:</strong> Ing. En Ciencia de Datos e Inteligencia de Negocios</span></div>
+            <div class="info-row"><i class="fas fa-birthday-cake"></i><span><strong>fecha de cumpleaños:</strong> 29/04/2007</span></div>
+            <div class="info-row"><i class="fas fa-birthday-cake"></i><span><strong>Edad:</strong> 19 años</span></div>
+            <div class="info-row"><i class="fas fa-language"></i><span><strong>Idiomas:</strong> Español </span></div>
+            <div class="info-row"><i class="fas fa-heart"></i><span><strong>Pasiones:</strong> Dinero,Bailar, Comer,Dormir</span></div>
+          </div>
+
+          <div class="sobre-tags">
+            <span class="stag">Creativa</span>
+            <span class="stag">Organizada o desorganizada</span>
+            <span class="stag">Proactiva</span>
+            <span class="stag">Borracha</span>
+            <span class="stag">curiosa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PERFIL ACADÉMICO ========== -->
+  <section class="section section-alt" id="perfil-academico">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Perfil Académico</h2>
+        <p class="section-sub">Formación, habilidades y competencias</p>
+      </div>
+
+      <div class="academico-grid">
+        <!-- Formación -->
+        <div class="academico-col" data-animate="up">
+          <div class="acad-card">
+            <div class="acad-card-header">
+              <i class="fas fa-university"></i>
+              <h3>Formación</h3>
+            </div>
+            <div class="education-list">
+              <div class="edu-item current">
+                <div class="edu-dot"></div>
+                <div class="edu-info">
+                  <span class="edu-period">2026 — Actualidad</span>
+                  <h4>Ing. En Ciencia de Datos e Inteligencia de Negocios</h4>
+                  <p>Universidad Privada del Valle</p>
+                </div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-info">
+                  <span class="edu-period">2012 — 2024</span>
+                  <h4>Primaria-Secundaria-Bachillerato</h4>
+                  <p> La salle</p>
+                </div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-info">
+                  <span class="edu-period">2021</span>
+                  <h4>UELS-MUN</h4>
+                  <p>La salle</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Habilidades técnicas -->
+        <div class="academico-col" data-animate="up" style="animation-delay:.1s">
+          <div class="acad-card">
+            <div class="acad-card-header">
+              <i class="fas fa-code"></i>
+              <h3>Habilidades</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Habilidad 1 - Bailar</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Habilidad 2 - Ventas</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Habilidad 3 - Makeup</span><span>75%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Habilidad 4 - Nadar</span><span>70%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Habilidad 5 - progamar</span><span>65%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOBBIES ========== -->
+  <section class="section" id="hobbies">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Mis Hobbies</h2>
+        <p class="section-sub">Lo que hago cuando no trabajo o estudio</p>
+      </div>
+      <div class="hobbies-grid">
+        <div class="hobby-card" data-animate="up">
+          <div class="hobby-img">
+            <img src="images/WhatsApp Image 2026-03-04 at 14.44.55.jpeg" alt="Hobby 1" id="h1" />
+            <label class="upload-btn" onclick="triggerUpload('h1')"><i class="fas fa-camera"></i></label>
+          </div>
+          <div class="hobby-body">
+            <div class="hobby-icon-wrap"><i class="fas fa-music"></i></div>
+            <h3>Bailar</h3>
+            <p>Me encanta bailar todo tipo de musica ya que lo encuentro como una manera de expresarce y liberarse</p>
+          </div>
+        </div>
+        <div class="hobby-card" data-animate="up" style="animation-delay:.1s">
+          <div class="hobby-img">
+            <img src="images/descarga (3).jpg" alt="Hobby 2" id="h2" />
+            <label class="upload-btn" onclick="triggerUpload('h2')"><i class="fas fa-camera"></i></label>
+          </div>
+          <div class="hobby-body">
+            <div class="hobby-icon-wrap"><i class="fas fa-book-open"></i></div>
+            <h3>Nadar</h3>
+            <p>Es una forma de mantener la mete tranquila y en paz</p>
+          </div>
+        </div>
+        <div class="hobby-card" data-animate="up" style="animation-delay:.2s">
+          <div class="hobby-img">
+            <img src="images/descarga (2).jpg" alt="Hobby 3" id="h3" />
+            <label class="upload-btn" onclick="triggerUpload('h3')"><i class="fas fa-camera"></i></label>
+          </div>
+          <div class="hobby-body">
+            <div class="hobby-icon-wrap"><i class="fas fa-palette"></i></div>
+            <h3>ver series</h3>
+            <p>Una forma de distraerme y noestar aburrida.</p>
+          </div>
+        </div>
+        <div class="hobby-card" data-animate="up" style="animation-delay:.3s">
+          <div class="hobby-img">
+            <img src="images/WhatsApp Image 2026-03-04 at 19.28.50.jpeg" alt="Hobby 4" id="h4" />
+            <label class="upload-btn" onclick="triggerUpload('h4')"><i class="fas fa-camera"></i></label>
+          </div>
+          <div class="hobby-body">
+            <div class="hobby-icon-wrap"><i class="fas fa-camera"></i></div>
+            <h3>comer</h3>
+            <p>Probar todo tipo de comida haci puedes hacer gozar tus papilas gustativas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACTIVIDADES ========== -->
+  <section class="section section-alt" id="actividades">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Mis Actividades</h2>
+        <p class="section-sub">Lo que hago día a día</p>
+      </div>
+      <div class="actividades-layout">
+        <div class="act-timeline">
+          <div class="act-item" data-animate="left">
+            <div class="act-time">Mañana</div>
+            <div class="act-card">
+              <div class="act-icon"><i class="fas fa-sun"></i></div>
+              <div class="act-content">
+                <h3>Estudio / Clases</h3>
+                <p>Pasar clases toda la mañana , madrugar casi todos los dias me agota pero nimodo</p>
+                <div class="act-tags"><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="act-item" data-animate="right">
+            <div class="act-time">Tarde</div>
+            <div class="act-card">
+              <div class="act-icon"><i class="fas fa-dumbbell"></i></div>
+              <div class="act-content">
+                <h3>casa / almorzar</h3>
+                <p>llego ami casa y me gusta comer , socializar con mi familia</p>
+                <div class="act-tags"><span></div>
+              </div>
+            </div>
+          </div>
+          <div class="act-item" data-animate="left">
+            <div class="act-time">Tarde/Noche</div>
+            <div class="act-card">
+              <div class="act-icon"><i class="fas fa-laptop"></i></div>
+              <div class="act-content">
+                <h3>trabajos-tareas</h3>
+                <p>Averiguo si tengo algun pendiente, si tengo lo hago y sino ps me dedico a trabaja</p>
+                <div class="act-tags"><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="act-item" data-animate="right">
+            <div class="act-time">Noche</div>
+            <div class="act-card">
+              <div class="act-icon"><i class="fas fa-users"></i></div>
+              <div class="act-content">
+                <h3>Vida Social</h3>
+                <p>Si es fin de semana salgo , voy a comer, salgo a pasear , me gusta salir mas en la noche</p>
+                <div class="act-tags"><span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="act-photo" data-animate="right">
+          <img src="images/WhatsApp Image 2026-03-04 at 20.17.11.jpeg" alt="Actividades" id="act-img" />
+          <label class="upload-btn" onclick="triggerUpload('act-img')"><i class="fas fa-camera"></i></label>
+          <div class="act-photo-badge">
+            <i class="fas fa-calendar-check"></i>
+            <div><span class="badge-num">365</span><span class="badge-txt">días al año activo/a</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== METAS ========== -->
+  <section class="section" id="metas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Mis Metas</h2>
+        <p class="section-sub">Hacia dónde voy</p>
+      </div>
+      <div class="metas-layout">
+        <div class="metas-cards">
+          <div class="meta-card green" data-animate="up">
+            <div class="meta-top">
+              <div class="meta-ico"><i class="fas fa-seedling"></i></div>
+              <div class="meta-label">Corto plazo <span>2026</span></div>
+            </div>
+            <ul class="meta-list">
+              <li class="done"><i class="fas fa-check-circle"></i>Estudiar en una universidad prestigiosa</li>
+              <li><i class="fas fa-circle-dot"></i>Aprobar en todas las materias</li>
+              <li><i class="fas fa-circle"></i>Aprobar los semestres</li>
+            </ul>
+            <div class="meta-progress"><div class="meta-prog-fill" style="width:45%"></div></div>
+            <span class="meta-prog-label">45% completado</span>
+          </div>
+          <div class="meta-card blue" data-animate="up" style="animation-delay:.1s">
+            <div class="meta-top">
+              <div class="meta-ico"><i class="fas fa-rocket"></i></div>
+              <div class="meta-label">Mediano plazo <span>2026-2029</span></div>
+            </div>
+            <ul class="meta-list">
+              <li><i class="fas fa-circle-dot"></i>Tener sabiduria y buenas experiencias</li>
+              <li><i class="fas fa-circle"></i>Viajar al extranjero y hacer intercambios para mi ambito laboral</li>
+              <li><i class="fas fa-circle"></i>Salir de la U con una buena defensa y un buen promedio</li>
+            </ul>
+            <div class="meta-progress"><div class="meta-prog-fill" style="width:20%"></div></div>
+            <span class="meta-prog-label">20% completado</span>
+          </div>
+          <div class="meta-card gold" data-animate="up" style="animation-delay:.2s">
+            <div class="meta-top">
+              <div class="meta-ico"><i class="fas fa-crown"></i></div>
+              <div class="meta-label">Largo plazo <span>2030+</span></div>
+            </div>
+            <ul class="meta-list">
+              <li><i class="fas fa-circle"></i>Trabajar en el extranjero y ejercer mi carrera</li>
+              <li><i class="fas fa-circle"></i>Tener un negocios laboral</li>
+              <li><i class="fas fa-circle"></i>Poder vivir al maximo mi vida, tener mucha plata y que alguien que me mantegan con amor y dinero</li>
+            </ul>
+            <div class="meta-progress"><div class="meta-prog-fill" style="width:5%"></div></div>
+            <span class="meta-prog-label">En construcción</span>
+          </div>
+        </div>
+        <div class="metas-quote" data-animate="right">
+          <div class="quote-icon">"</div>
+          <blockquote>Los sueños no tienen fecha de vencimiento. Solo necesitan determinación y el primer paso.</blockquote>
+          <div class="quote-img">
+            <img src="images/WhatsApp Image 2026-03-04 at 19.22.55.jpeg" alt="Inspiración" id="meta-img" />
+            <label class="upload-btn" onclick="triggerUpload('meta-img')"><i class="fas fa-camera"></i></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROYECTOS / PORTAFOLIO ========== -->
+  <section class="section section-alt" id="proyectos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Proyectos & Portafolio</h2>
+        <p class="section-sub">Evidencias de mis trabajos realizados</p>
+      </div>
+
+      <div class="filter-bar" data-animate="up">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">Todos</button>
+        <button class="filter-btn" onclick="filterProjects('academico', this)">Académico</button>
+        <button class="filter-btn" onclick="filterProjects('personal', this)">Personal</button>
+        <button class="filter-btn" onclick="filterProjects('creativo', this)">Creativo</button>
+      </div>
+
+      <div class="proyectos-grid" id="proyectos-grid">
+        <div class="proyecto-card" data-cat="academico" data-animate="up">
+          <div class="proy-img">
+            <img src="images/Captura de pantalla 2026-03-04 202558.png" alt="Proyecto 1" id="p1" />
+            <label class="upload-btn" onclick="triggerUpload('p1')"><i class="fas fa-camera"></i></label>
+            <div class="proy-overlay">
+              <a href="#" class="proy-link"><i class="fas fa-external-link-alt"></i> Ver proyecto</a>
+            </div>
+          </div>
+          <div class="proy-body">
+            <div class="proy-cat">Académico</div>
+            <h3>MODELO Predictivo para de enfermedades Cardiacas Utilizando en Datos Clinicos</h3>
+            <p> Queriamos saber que factores de riesgo influyen en la prediccion de los resultados de esta enfermedad</p>
+            <div class="proy-tech"><span>Jupyter</span><span> canva</span></div>
+          </div>
+        </div>
+
+        <div class="proyecto-card" data-cat="personal" data-animate="up" style="animation-delay:.1s">
+          <div class="proy-img">
+            <img src="images/Mi Proyecto de vida ✨.jpg" alt="Proyecto 2" id="p2" />
+            <label class="upload-btn" onclick="triggerUpload('p2')"><i class="fas fa-camera"></i></label>
+            <div class="proy-overlay">
+              <a href="#" class="proy-link"><i class="fas fa-external-link-alt"></i> Ver proyecto</a>
+            </div>
+          </div>
+          <div class="proy-body">
+            <div class="proy-cat">Personal</div>
+            <h3>MI Nueva Version 2</h3>
+            <p>Queria mantenerme enfocada en mi buscar mi espacio , tener paz mental , cuidar mi salud y sentirme mejor con migo misma</p>
+            <div class="proy-tech"><span>ejercicio</span><span> trabajar</span></div>
+          </div>
+        </div>
+
+        <div class="proyecto-card" data-cat="creativo" data-animate="up" style="animation-delay:.2s">
+          <div class="proy-img">
+            <img src="images/WhatsApp Image 2026-03-05 at 01.06.21.jpeg" alt="Proyecto 3" id="p3" />
+            <label class="upload-btn" onclick="triggerUpload('p3')"><i class="fas fa-camera"></i></label>
+            <div class="proy-overlay">
+              <a href="#" class="proy-link"><i class="fas fa-external-link-alt"></i> Ver proyecto</a>
+            </div>
+          </div>
+          <div class="proy-body">
+            <div class="proy-cat">Creativo</div>
+            <h3>Henfils 3</h3>
+            <p> es una proyecto que trata sobre el emprendimiento de una marca que importa material de escritorio</p>
+            <div class="proy-tech"><span>Arte</span><span>Diseño</span><span>Creatividad</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALERÍA ========== -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Mi Galería</h2>
+        <p class="section-sub">Mis momentos especiales</p>
+      </div>
+      <p class="gallery-tip"><i class="fas fa-hand-pointer"></i> Clic en cualquier foto para verla en pantalla completa <i class="fas fa-camera"></i> </p>
+      <div class="masonry-grid">
+        <div class="masonry-item" onclick="openLightbox(this)">
+          <img src="images/WhatsApp Image 2026-03-04 at 15.24.54.jpeg" alt="Momento 1" id="g1" />
+          <label class="upload-btn" onclick="event.stopPropagation();triggerUpload('g1')"><i class="fas fa-camera"></i></label>
+          <div class="masonry-overlay"><span>✦ Mi momento especial</span></div>
+        </div>
+        <div class="masonry-item short" onclick="openLightbox(this)">
+          <img src="images/WhatsApp Image 2026-03-04 at 17.47.20.jpeg" alt="Momento 2" id="g2" />
+          <label class="upload-btn" onclick="event.stopPropagation();triggerUpload('g2')"><i class="fas fa-camera"></i></label>
+          <div class="masonry-overlay"><span>✦ Recuerdo</span></div>
+        </div>
+        <div class="masonry-item short" onclick="openLightbox(this)">
+          <img src="images/WhatsApp Image 2026-03-04 at 15.34.422222.jpeg" alt="Momento 3" id="g3" />
+          <label class="upload-btn" onclick="event.stopPropagation();triggerUpload('g3')"><i class="fas fa-camera"></i></label>
+          <div class="masonry-overlay"><span>✦ Aventura</span></div>
+        </div>
+        <div class="masonry-item" onclick="openLightbox(this)">
+          <img src="images/WhatsApp Image 2026-03-03 at 23.10.20.jpeg" alt="Momento 4" id="g4" />
+          <label class="upload-btn" onclick="event.stopPropagation();triggerUpload('g4')"><i class="fas fa-camera"></i></label>
+          <div class="masonry-overlay"><span>✦ Amistad</span></div>
+        </div>
+        <div class="masonry-item wide" onclick="openLightbox(this)">
+          <img src="images/WhatsApp Image 2026-03-03 at 23.10.17.jpeg" alt="Momento 5" id="g5" />
+          <label class="upload-btn" onclick="event.stopPropagation();triggerUpload('g5')"><i class="fas fa-camera"></i></label>
+          <div class="masonry-overlay"><span>✦ Mi lugar favorito</span></div>
+        </div>
+        <div class="masonry-item short" onclick="openLightbox(this)">
+          <img src="images/WhatsApp Image 2026-03-04 at 17.47.20-21.jpeg" alt="Momento 6" id="g6" />
+          <label class="upload-btn" onclick="event.stopPropagation();triggerUpload('g6')"><i class="fas fa-camera"></i></label>
+          <div class="masonry-overlay"><span>✦ Naturaleza</span></div>
+        </div>
+        <div class="masonry-item short" onclick="openLightbox(this)">
+          <img src="images/WhatsApp Image 2026-03-04 at 15.34.54444.jpeg" alt="Momento 7" id="g7" />
+          <label class="upload-btn" onclick="event.stopPropagation();triggerUpload('g7')"><i class="fas fa-camera"></i></label>
+          <div class="masonry-overlay"><span>✦ Vida cotidiana</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTOS ========== -->
+  <section class="section section-alt" id="contactos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">08</span>
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-sub">Hablemos — estoy disponible</p>
+      </div>
+
+      <div class="contacto-layout">
+        <!-- Redes sociales -->
+        <div class="redes-col" data-animate="left">
+          <h3 class="col-title"><i class="fas fa-share-alt"></i> Mis Redes Sociales</h3>
+          <div class="redes-grid">
+            <a href="https://www.instagram.com/cielitoooo_07?igsh=aDI0bHVzemsyZ3I0&utm_source=qr" target="_blank" class="red-card ig">
+              <div class="red-icon"><i class="fab fa-instagram"></i></div>
+              <div class="red-info"><strong>Instagram</strong><span>@cielitoooo_07</span></div>
+              <i class="fas fa-arrow-right red-arrow"></i>
+            </a>
+            <a href="images/WhatsApp Image 2026-03-04 at 16.01.04.jpeg" target="_blank" class="red-card wa">
+              <div class="red-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="red-info"><strong>WhatsApp</strong><span>+591 71717013</span></div>
+              <i class="fas fa-arrow-right red-arrow"></i>
+            </a>
+            <a href="https://www.tiktok.com/@compras_caramelo?_r=1&_t=ZS-94PsC8tbYoe" target="_blank" class="red-card tt">
+              <div class="red-icon"><i class="fab fa-tiktok"></i></div>
+              <div class="red-info"><strong>TikTok</strong><span>@sky-yy</span></div>
+              <i class="fas fa-arrow-right red-arrow"></i>
+            </a>
+            </a>
+            <a href="https://www.facebook.com/share/1C38zs3Rke/?mibextid=wwXIfr" target="_blank" class="red-card fb">
+              <div class="red-icon"><i class="fab fa-facebook-f"></i></div>
+              <div class="red-info"><strong>Facebook</strong><span>cielo melany sanchez miranda</span></div>
+              <i class="fas fa-arrow-right red-arrow"></i>
+            </a>
+          </div>
+
+          <div class="contact-direct">
+            <a href="mailto:tu@email.com" class="direct-link"><i class="fas fa-envelope"></i> @cielomelanys@gmail.com</a>
+            <a href="tel:+591 71717013" class="direct-link"><i class="fas fa-phone"></i> +591 71717013</a>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="form-col" data-animate="right">
+          <h3 class="col-title"><i class="fas fa-paper-plane"></i> Enviame un mensaje</h3>
+          <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Nombre</label>
+                <input type="text" id="fname" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" placeholder="tu@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fasunto">Asunto</label>
+              <input type="text" id="fasunto" placeholder="¿De qué querés hablar?" required />
+            </div>
+            <div class="form-group">
+              <label for="fmensaje">Mensaje</label>
+              <textarea id="fmensaje" rows="5" placeholder="Escribí tu mensaje aquí..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <span>Enviar mensaje</span> <i class="fas fa-paper-plane"></i>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i> ¡Mensaje enviado! Te respondo a la brevedad.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-dot"></span>
+        <span>Mi Mundo Personal</span>
+      </div>
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contactos">Contacto</a>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> — Hecho con <i class="fas fa-heart" style="color:#f472b6"></i> y mucha dedicación</p>
+    </div>
+  </footer>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lb-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+    <button class="lb-prev" onclick="event.stopPropagation();lbNav(-1)"><i class="fas fa-chevron-left"></i></button>
+    <img src="" alt="" id="lb-img" onclick="event.stopPropagation()" />
+    <button class="lb-next" onclick="event.stopPropagation();lbNav(1)"><i class="fas fa-chevron-right"></i></button>
+  </div>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- File input oculto -->
+  <input type="file" id="file-upload" accept="image/*" style="display:none" onchange="handleUpload()" />
+
+  <script>
+    // ---- AÑO ----
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ---- TYPING EFFECT ----
+    const roles = ['Estudiante', 'Soñador/a', 'Creativo/a', 'Apasionado/a', 'Futuro/a Profesional'];
+    let ri = 0, ci = 0, del = false;
+    const el = document.getElementById('typing-text');
+    function typeLoop() {
+      const word = roles[ri];
+      if (!del) {
+        el.textContent = word.slice(0, ++ci);
+        if (ci === word.length) { del = true; setTimeout(typeLoop, 1800); return; }
+      } else {
+        el.textContent = word.slice(0, --ci);
+        if (ci === 0) { del = false; ri = (ri + 1) % roles.length; }
+      }
+      setTimeout(typeLoop, del ? 60 : 100);
+    }
+    typeLoop();
+
+    // ---- NAVBAR ----
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+      document.getElementById('backTop').classList.toggle('visible', window.scrollY > 400);
+    });
+
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('navLinks').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('active');
+      });
+    });
+
+    // ---- CURSOR CUSTOM ----
+    const cur = document.getElementById('cursor');
+    const fol = document.getElementById('cursor-follower');
+    let mx = 0, my = 0, fx = 0, fy = 0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cur.style.left = mx + 'px'; cur.style.top = my + 'px';
+    });
+    function animCursor() {
+      fx += (mx - fx) * 0.12; fy += (my - fy) * 0.12;
+      fol.style.left = fx + 'px'; fol.style.top = fy + 'px';
+      requestAnimationFrame(animCursor);
+    }
+    animCursor();
+    document.querySelectorAll('a, button, .hobby-card, .proyecto-card, .red-card, .gallery-item, .masonry-item').forEach(el2 => {
+      el2.addEventListener('mouseenter', () => { cur.classList.add('hover'); fol.classList.add('hover'); });
+      el2.addEventListener('mouseleave', () => { cur.classList.remove('hover'); fol.classList.remove('hover'); });
+    });
+
+    // ---- INTERSECTION OBSERVER ----
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          // Skill bars
+          e.target.querySelectorAll('.skill-fill').forEach(b => {
+            b.style.width = b.dataset.width + '%';
+          });
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('[data-animate], .skill-fill').forEach(el3 => observer.observe(el3));
+    document.querySelectorAll('.acad-card, .hobby-card, .act-item, .meta-card, .proyecto-card, .masonry-item, .red-card, .logro-card').forEach(el4 => observer.observe(el4));
+
+    // ---- PHOTO UPLOAD ----
+    let curId = null;
+    function triggerUpload(id) { curId = id; document.getElementById('file-upload').click(); }
+    function handleUpload() {
+      const f = document.getElementById('file-upload').files[0];
+      if (!f || !curId) return;
+      const r = new FileReader();
+      r.onload = e => { document.getElementById(curId).src = e.target.result; };
+      r.readAsDataURL(f);
+      document.getElementById('file-upload').value = '';
+    }
+
+    // ---- LIGHTBOX ----
+    let lbImgs = [], lbIdx = 0;
+    function openLightbox(card) {
+      lbImgs = [...document.querySelectorAll('.masonry-item img')].map(i => i.src);
+      const src = card.querySelector('img').src;
+      lbIdx = lbImgs.indexOf(src);
+      document.getElementById('lb-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    function lbNav(dir) {
+      lbIdx = (lbIdx + dir + lbImgs.length) % lbImgs.length;
+      const img = document.getElementById('lb-img');
+      img.style.opacity = 0;
+      setTimeout(() => { img.src = lbImgs[lbIdx]; img.style.opacity = 1; }, 200);
+    }
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') lbNav(1);
+      if (e.key === 'ArrowLeft') lbNav(-1);
+    });
+
+    // ---- PROJECT FILTER ----
+    function filterProjects(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.proyecto-card').forEach(c => {
+        const show = cat === 'all' || c.dataset.cat === cat;
+        c.style.display = show ? 'block' : 'none';
+        if (show) { c.style.animation = 'none'; c.offsetHeight; c.style.animation = ''; }
+      });
+    }
+
+    // ---- FORM ----
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.form-submit');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<span>Enviar mensaje</span> <i class="fas fa-paper-plane"></i>';
+        btn.disabled = false;
+        document.getElementById('formSuccess').classList.add('show');
+        e.target.reset();
+        setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 4000);
+      }, 1500);
+    }
+
+    // ---- ACTIVE NAV SECTION ----
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let cur2 = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 200) cur2 = s.id; });
+      document.querySelectorAll('.nav-link').forEach(l => {
+        l.classList.toggle('active', l.dataset.section === cur2);
+      });
+    });
+  </script>
+</body>
+</html>
